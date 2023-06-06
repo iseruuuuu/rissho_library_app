@@ -3,6 +3,7 @@ import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:rissho_library_app/ui/book/book_screen.dart';
 import 'package:rissho_library_app/ui/book_search/book_search_screen.dart';
 import 'package:rissho_library_app/ui/home/home_screen.dart';
+import 'package:rissho_library_app/ui/setting/setting_screen.dart';
 
 import 'tab_provider.dart';
 
@@ -17,6 +18,7 @@ class TabScreen extends ConsumerWidget {
         const HomeScreen(),
         const BookScreen(),
         const BookSearchScreen(),
+        const SettingScreen(),
       ][selectedIndex],
       bottomNavigationBar: Container(
         decoration: const BoxDecoration(
