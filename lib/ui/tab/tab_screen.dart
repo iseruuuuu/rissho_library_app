@@ -46,16 +46,16 @@ class TabScreen extends ConsumerWidget {
           },
           items: const [
             BottomNavigationBarItem(
-              icon: Icon(Icons.fastfood),
-              label: 'レストラン',
+              icon: Icon(Icons.home),
+              label: 'ホーム',
             ),
             BottomNavigationBarItem(
-              icon: Icon(Icons.train),
-              label: '交通情報',
+              icon: Icon(Icons.book),
+              label: '図書館案内',
             ),
             BottomNavigationBarItem(
-              icon: Icon(Icons.sunny),
-              label: '天気',
+              icon: Icon(Icons.search),
+              label: '図書検索',
             ),
             BottomNavigationBarItem(
               icon: Icon(Icons.settings),
