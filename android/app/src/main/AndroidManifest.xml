@@ -20,7 +20,7 @@
 
 
     <application
-        android:label="rissho_library_app"
+        android:label="RisshoLib"
         android:name="${applicationName}"
         android:icon="@mipmap/ic_launcher">
         <activity
