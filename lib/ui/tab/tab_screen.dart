@@ -18,7 +18,7 @@ class TabScreen extends ConsumerWidget {
         const HomeScreen(),
         const BookScreen(),
         const BookSearchScreen(),
-        const BookPlaceScreen(),
+        // const BookPlaceScreen(),
       ][selectedIndex],
       bottomNavigationBar: Container(
         decoration: const BoxDecoration(
@@ -57,10 +57,10 @@ class TabScreen extends ConsumerWidget {
               icon: Icon(Icons.search),
               label: '図書検索',
             ),
-            BottomNavigationBarItem(
-              icon: Icon(Icons.settings),
-              label: '場所検索',
-            ),
+            // BottomNavigationBarItem(
+            //   icon: Icon(Icons.settings),
+            //   label: '場所検索',
+            // ),
           ],
           type: BottomNavigationBarType.fixed,
         ),
