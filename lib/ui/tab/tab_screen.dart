@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:rissho_library_app/ui/book/book_screen.dart';
+import 'package:rissho_library_app/ui/book_place/book_place_screen.dart';
 import 'package:rissho_library_app/ui/book_search/book_search_screen.dart';
 import 'package:rissho_library_app/ui/home/home_screen.dart';
-import 'package:rissho_library_app/ui/setting/setting_screen.dart';
 
 import 'tab_provider.dart';
 
@@ -18,7 +18,7 @@ class TabScreen extends ConsumerWidget {
         const HomeScreen(),
         const BookScreen(),
         const BookSearchScreen(),
-        const SettingScreen(),
+        const BookPlaceScreen(),
       ][selectedIndex],
       bottomNavigationBar: Container(
         decoration: const BoxDecoration(
@@ -59,7 +59,7 @@ class TabScreen extends ConsumerWidget {
             ),
             BottomNavigationBarItem(
               icon: Icon(Icons.settings),
-              label: '設定',
+              label: '場所検索',
             ),
           ],
           type: BottomNavigationBarType.fixed,
