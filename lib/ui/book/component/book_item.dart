@@ -17,20 +17,25 @@ class BookItem extends StatelessWidget {
       height: MediaQuery.of(context).size.height,
       child: Column(
         children: [
-          const Spacer(),
-          Text(
-            title,
-            style: const TextStyle(
-              fontWeight: FontWeight.bold,
-              fontSize: 40,
-              color: Colors.black,
+          Padding(
+            padding: const EdgeInsets.only(top: 10),
+            child: Text(
+              title,
+              style: const TextStyle(
+                fontWeight: FontWeight.bold,
+                fontSize: 40,
+                color: Colors.black,
+              ),
             ),
           ),
-          Text(
-            subTitle,
-            style: const TextStyle(
-              fontSize: 25,
-              color: Colors.black,
+          Padding(
+            padding: const EdgeInsets.all(20),
+            child: Text(
+              subTitle,
+              style: const TextStyle(
+                fontSize: 25,
+                color: Colors.black,
+              ),
             ),
           ),
 
