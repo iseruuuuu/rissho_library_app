@@ -14,12 +14,17 @@ class BookSearchScreen extends ConsumerWidget {
     final isLoading = ref.watch(isLoadingProvider);
     return Scaffold(
       backgroundColor: const Color(0xFFFCFCFC),
-      appBar: PreferredSize(
-        preferredSize: Size.zero,
-        child: AppBar(
-          elevation: 0,
-          backgroundColor: const Color(0xFFFCFCFC),
+      appBar: AppBar(
+        elevation: 0,
+        title: const Text(
+          '図書検索',
+          style: TextStyle(
+            fontSize: 20,
+            fontWeight: FontWeight.bold,
+            color: Colors.white,
+          ),
         ),
+        backgroundColor: const Color(0xFF00A170),
       ),
       body: Stack(
         children: [
@@ -36,8 +41,8 @@ class BookSearchScreen extends ConsumerWidget {
                   onLoadStop: (controller, url) {
                     ref.read(isLoadingProvider.notifier).setLoading(false);
                   },
-                  initialUrlRequest: URLRequest(
-                      url: Uri.parse('https://www.ris.ac.jp/library/')),
+                  initialUrlRequest:
+                      URLRequest(url: Uri.parse('https://opac.ris.ac.jp/')),
                   initialOptions: InAppWebViewGroupOptions(
                     crossPlatform: InAppWebViewOptions(
                       transparentBackground: true,
@@ -98,7 +103,7 @@ class BookSearchScreen extends ConsumerWidget {
                     IconButton(
                       onPressed: () => webView.state!.loadUrl(
                         urlRequest: URLRequest(
-                            url: Uri.parse('https://www.ris.ac.jp/library/')),
+                            url: Uri.parse('https://opac.ris.ac.jp/')),
                       ),
                       icon: const Icon(Icons.home),
                     ),
