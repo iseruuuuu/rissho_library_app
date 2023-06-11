@@ -5,13 +5,22 @@ class BookItem extends StatelessWidget {
     Key? key,
     required this.title,
     required this.subTitle,
+    required this.image,
+    required this.isForward,
+    required this.isBack,
+    required this.controller,
   }) : super(key: key);
 
   final String title;
   final String subTitle;
+  final String image;
+  final bool isForward;
+  final bool isBack;
+  final ScrollController controller;
 
   @override
   Widget build(BuildContext context) {
+    final deviceSize = MediaQuery.of(context).size.width;
     return SizedBox(
       width: MediaQuery.of(context).size.width,
       height: MediaQuery.of(context).size.height,
@@ -23,30 +32,67 @@ class BookItem extends StatelessWidget {
               title,
               style: const TextStyle(
                 fontWeight: FontWeight.bold,
-                fontSize: 40,
+                fontSize: 30,
                 color: Colors.black,
               ),
             ),
           ),
           Padding(
-            padding: const EdgeInsets.all(20),
+            padding: const EdgeInsets.symmetric(horizontal: 20),
             child: Text(
               subTitle,
               style: const TextStyle(
-                fontSize: 25,
+                fontSize: 18,
                 color: Colors.black,
               ),
             ),
           ),
-
-          //TODO 請求番号の説明を載っける
-
-          //TODO 階層の写真を載っける。
-
+          Image.asset(
+            image,
+            height: 400,
+          ),
           const Spacer(),
           Padding(
-            padding: const EdgeInsets.symmetric(vertical: 20),
-            child: Image.asset('assets/images/arrow.png'),
+            padding: const EdgeInsets.all(8),
+            child: Row(
+              children: [
+                GestureDetector(
+                  onTap: isBack
+                      ? () {
+                          controller.animateTo(
+                            controller.offset - deviceSize,
+                            duration: const Duration(seconds: 1),
+                            curve: Curves.easeInOut,
+                          );
+                        }
+                      : null,
+                  child: isBack
+                      ? Image.asset(
+                          'assets/images/back_arrow.png',
+                          height: 80,
+                        )
+                      : const SizedBox.shrink(),
+                ),
+                const Spacer(),
+                GestureDetector(
+                  onTap: isForward
+                      ? () {
+                          controller.animateTo(
+                            controller.offset + deviceSize,
+                            duration: const Duration(seconds: 1),
+                            curve: Curves.easeInOut,
+                          );
+                        }
+                      : null,
+                  child: isForward
+                      ? Image.asset(
+                          'assets/images/forward_arrow.png',
+                          height: 80,
+                        )
+                      : const SizedBox.shrink(),
+                ),
+              ],
+            ),
           ),
         ],
       ),
