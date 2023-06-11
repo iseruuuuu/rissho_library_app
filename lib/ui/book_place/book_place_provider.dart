@@ -1,29 +1,29 @@
-import 'package:hooks_riverpod/hooks_riverpod.dart';
+import 'package:rissho_library_app/ui/book_place/book_place_state.dart';
+import 'package:riverpod_annotation/riverpod_annotation.dart';
+import '../../utils/book_place_utils.dart';
 
-final bookPlaceProvider =
-    StateNotifierProvider<BookPlaceNotifier, List<String>>((_) {
-  return BookPlaceNotifier();
-});
+part 'book_place_provider.g.dart';
 
-class BookPlaceNotifier extends StateNotifier<List<String>> {
-  BookPlaceNotifier() : super([]);
+@riverpod
+class BookPlaceViewModel extends _$BookPlaceViewModel {
+  @override
+  BookPlaceState build({
+    BookPlaceState initState = const BookPlaceState.empty(),
+  }) {
+    return initState;
+  }
 
   void onChanged(String value) {
-    if (value.isNotEmpty) {
-      state.clear();
-      var newValue = int.parse(value);
-      //TODO 配列番号によって状況を変える。
-      if (newValue <= 100) {
-        state.addAll(['3階']);
-      } else if (newValue >= 100 && newValue <= 200) {
-        state.addAll(['2階']);
-      } else if (newValue >= 300 && newValue <= 400) {
-        state.addAll(['1階']);
-      } else if (newValue >= 400 && newValue <= 500) {
-        state.addAll(['B1階']);
-      } else {
-        state.clear();
-      }
+    if (value.isEmpty) {
+      state = const BookPlaceState.empty();
+      return;
     }
+    state = state.map(
+      firstLoading: (_) => throw AssertionError(),
+      empty: (_) => const BookPlaceState.firstLoading(),
+      list: (_) => const BookPlaceState.firstLoading(),
+    );
+    final List<String> bookList = BookPlaceUtils().getData(int.parse(value));
+    state = BookPlaceState.list(bookPlaceList: bookList);
   }
 }
