@@ -19,6 +19,7 @@ mixin _$BookPlaceState {
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
     required TResult Function() firstLoading,
+    required TResult Function() firstEmpty,
     required TResult Function() empty,
     required TResult Function(List<String> bookPlaceList) list,
   }) =>
@@ -26,6 +27,7 @@ mixin _$BookPlaceState {
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? firstLoading,
+    TResult? Function()? firstEmpty,
     TResult? Function()? empty,
     TResult? Function(List<String> bookPlaceList)? list,
   }) =>
@@ -33,6 +35,7 @@ mixin _$BookPlaceState {
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? firstLoading,
+    TResult Function()? firstEmpty,
     TResult Function()? empty,
     TResult Function(List<String> bookPlaceList)? list,
     required TResult orElse(),
@@ -41,6 +44,7 @@ mixin _$BookPlaceState {
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
     required TResult Function(BookPlaceStateFirstLoading value) firstLoading,
+    required TResult Function(BookPlaceStateFirstEmpty value) firstEmpty,
     required TResult Function(BookPlaceStateEmpty value) empty,
     required TResult Function(BookPlaceStateList value) list,
   }) =>
@@ -48,6 +52,7 @@ mixin _$BookPlaceState {
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
     TResult? Function(BookPlaceStateFirstLoading value)? firstLoading,
+    TResult? Function(BookPlaceStateFirstEmpty value)? firstEmpty,
     TResult? Function(BookPlaceStateEmpty value)? empty,
     TResult? Function(BookPlaceStateList value)? list,
   }) =>
@@ -55,6 +60,7 @@ mixin _$BookPlaceState {
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
     TResult Function(BookPlaceStateFirstLoading value)? firstLoading,
+    TResult Function(BookPlaceStateFirstEmpty value)? firstEmpty,
     TResult Function(BookPlaceStateEmpty value)? empty,
     TResult Function(BookPlaceStateList value)? list,
     required TResult orElse(),
@@ -122,6 +128,7 @@ class _$BookPlaceStateFirstLoading extends BookPlaceStateFirstLoading {
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
     required TResult Function() firstLoading,
+    required TResult Function() firstEmpty,
     required TResult Function() empty,
     required TResult Function(List<String> bookPlaceList) list,
   }) {
@@ -132,6 +139,7 @@ class _$BookPlaceStateFirstLoading extends BookPlaceStateFirstLoading {
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? firstLoading,
+    TResult? Function()? firstEmpty,
     TResult? Function()? empty,
     TResult? Function(List<String> bookPlaceList)? list,
   }) {
@@ -142,6 +150,7 @@ class _$BookPlaceStateFirstLoading extends BookPlaceStateFirstLoading {
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? firstLoading,
+    TResult Function()? firstEmpty,
     TResult Function()? empty,
     TResult Function(List<String> bookPlaceList)? list,
     required TResult orElse(),
@@ -156,6 +165,7 @@ class _$BookPlaceStateFirstLoading extends BookPlaceStateFirstLoading {
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
     required TResult Function(BookPlaceStateFirstLoading value) firstLoading,
+    required TResult Function(BookPlaceStateFirstEmpty value) firstEmpty,
     required TResult Function(BookPlaceStateEmpty value) empty,
     required TResult Function(BookPlaceStateList value) list,
   }) {
@@ -166,6 +176,7 @@ class _$BookPlaceStateFirstLoading extends BookPlaceStateFirstLoading {
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
     TResult? Function(BookPlaceStateFirstLoading value)? firstLoading,
+    TResult? Function(BookPlaceStateFirstEmpty value)? firstEmpty,
     TResult? Function(BookPlaceStateEmpty value)? empty,
     TResult? Function(BookPlaceStateList value)? list,
   }) {
@@ -176,6 +187,7 @@ class _$BookPlaceStateFirstLoading extends BookPlaceStateFirstLoading {
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
     TResult Function(BookPlaceStateFirstLoading value)? firstLoading,
+    TResult Function(BookPlaceStateFirstEmpty value)? firstEmpty,
     TResult Function(BookPlaceStateEmpty value)? empty,
     TResult Function(BookPlaceStateList value)? list,
     required TResult orElse(),
@@ -190,6 +202,122 @@ class _$BookPlaceStateFirstLoading extends BookPlaceStateFirstLoading {
 abstract class BookPlaceStateFirstLoading extends BookPlaceState {
   const factory BookPlaceStateFirstLoading() = _$BookPlaceStateFirstLoading;
   const BookPlaceStateFirstLoading._() : super._();
+}
+
+/// @nodoc
+abstract class _$$BookPlaceStateFirstEmptyCopyWith<$Res> {
+  factory _$$BookPlaceStateFirstEmptyCopyWith(_$BookPlaceStateFirstEmpty value,
+          $Res Function(_$BookPlaceStateFirstEmpty) then) =
+      __$$BookPlaceStateFirstEmptyCopyWithImpl<$Res>;
+}
+
+/// @nodoc
+class __$$BookPlaceStateFirstEmptyCopyWithImpl<$Res>
+    extends _$BookPlaceStateCopyWithImpl<$Res, _$BookPlaceStateFirstEmpty>
+    implements _$$BookPlaceStateFirstEmptyCopyWith<$Res> {
+  __$$BookPlaceStateFirstEmptyCopyWithImpl(_$BookPlaceStateFirstEmpty _value,
+      $Res Function(_$BookPlaceStateFirstEmpty) _then)
+      : super(_value, _then);
+}
+
+/// @nodoc
+
+class _$BookPlaceStateFirstEmpty extends BookPlaceStateFirstEmpty {
+  const _$BookPlaceStateFirstEmpty() : super._();
+
+  @override
+  String toString() {
+    return 'BookPlaceState.firstEmpty()';
+  }
+
+  @override
+  bool operator ==(dynamic other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$BookPlaceStateFirstEmpty);
+  }
+
+  @override
+  int get hashCode => runtimeType.hashCode;
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() firstLoading,
+    required TResult Function() firstEmpty,
+    required TResult Function() empty,
+    required TResult Function(List<String> bookPlaceList) list,
+  }) {
+    return firstEmpty();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? firstLoading,
+    TResult? Function()? firstEmpty,
+    TResult? Function()? empty,
+    TResult? Function(List<String> bookPlaceList)? list,
+  }) {
+    return firstEmpty?.call();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? firstLoading,
+    TResult Function()? firstEmpty,
+    TResult Function()? empty,
+    TResult Function(List<String> bookPlaceList)? list,
+    required TResult orElse(),
+  }) {
+    if (firstEmpty != null) {
+      return firstEmpty();
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(BookPlaceStateFirstLoading value) firstLoading,
+    required TResult Function(BookPlaceStateFirstEmpty value) firstEmpty,
+    required TResult Function(BookPlaceStateEmpty value) empty,
+    required TResult Function(BookPlaceStateList value) list,
+  }) {
+    return firstEmpty(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(BookPlaceStateFirstLoading value)? firstLoading,
+    TResult? Function(BookPlaceStateFirstEmpty value)? firstEmpty,
+    TResult? Function(BookPlaceStateEmpty value)? empty,
+    TResult? Function(BookPlaceStateList value)? list,
+  }) {
+    return firstEmpty?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(BookPlaceStateFirstLoading value)? firstLoading,
+    TResult Function(BookPlaceStateFirstEmpty value)? firstEmpty,
+    TResult Function(BookPlaceStateEmpty value)? empty,
+    TResult Function(BookPlaceStateList value)? list,
+    required TResult orElse(),
+  }) {
+    if (firstEmpty != null) {
+      return firstEmpty(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class BookPlaceStateFirstEmpty extends BookPlaceState {
+  const factory BookPlaceStateFirstEmpty() = _$BookPlaceStateFirstEmpty;
+  const BookPlaceStateFirstEmpty._() : super._();
 }
 
 /// @nodoc
@@ -231,6 +359,7 @@ class _$BookPlaceStateEmpty extends BookPlaceStateEmpty {
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
     required TResult Function() firstLoading,
+    required TResult Function() firstEmpty,
     required TResult Function() empty,
     required TResult Function(List<String> bookPlaceList) list,
   }) {
@@ -241,6 +370,7 @@ class _$BookPlaceStateEmpty extends BookPlaceStateEmpty {
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? firstLoading,
+    TResult? Function()? firstEmpty,
     TResult? Function()? empty,
     TResult? Function(List<String> bookPlaceList)? list,
   }) {
@@ -251,6 +381,7 @@ class _$BookPlaceStateEmpty extends BookPlaceStateEmpty {
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? firstLoading,
+    TResult Function()? firstEmpty,
     TResult Function()? empty,
     TResult Function(List<String> bookPlaceList)? list,
     required TResult orElse(),
@@ -265,6 +396,7 @@ class _$BookPlaceStateEmpty extends BookPlaceStateEmpty {
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
     required TResult Function(BookPlaceStateFirstLoading value) firstLoading,
+    required TResult Function(BookPlaceStateFirstEmpty value) firstEmpty,
     required TResult Function(BookPlaceStateEmpty value) empty,
     required TResult Function(BookPlaceStateList value) list,
   }) {
@@ -275,6 +407,7 @@ class _$BookPlaceStateEmpty extends BookPlaceStateEmpty {
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
     TResult? Function(BookPlaceStateFirstLoading value)? firstLoading,
+    TResult? Function(BookPlaceStateFirstEmpty value)? firstEmpty,
     TResult? Function(BookPlaceStateEmpty value)? empty,
     TResult? Function(BookPlaceStateList value)? list,
   }) {
@@ -285,6 +418,7 @@ class _$BookPlaceStateEmpty extends BookPlaceStateEmpty {
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
     TResult Function(BookPlaceStateFirstLoading value)? firstLoading,
+    TResult Function(BookPlaceStateFirstEmpty value)? firstEmpty,
     TResult Function(BookPlaceStateEmpty value)? empty,
     TResult Function(BookPlaceStateList value)? list,
     required TResult orElse(),
@@ -376,6 +510,7 @@ class _$BookPlaceStateList extends BookPlaceStateList {
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
     required TResult Function() firstLoading,
+    required TResult Function() firstEmpty,
     required TResult Function() empty,
     required TResult Function(List<String> bookPlaceList) list,
   }) {
@@ -386,6 +521,7 @@ class _$BookPlaceStateList extends BookPlaceStateList {
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? firstLoading,
+    TResult? Function()? firstEmpty,
     TResult? Function()? empty,
     TResult? Function(List<String> bookPlaceList)? list,
   }) {
@@ -396,6 +532,7 @@ class _$BookPlaceStateList extends BookPlaceStateList {
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? firstLoading,
+    TResult Function()? firstEmpty,
     TResult Function()? empty,
     TResult Function(List<String> bookPlaceList)? list,
     required TResult orElse(),
@@ -410,6 +547,7 @@ class _$BookPlaceStateList extends BookPlaceStateList {
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
     required TResult Function(BookPlaceStateFirstLoading value) firstLoading,
+    required TResult Function(BookPlaceStateFirstEmpty value) firstEmpty,
     required TResult Function(BookPlaceStateEmpty value) empty,
     required TResult Function(BookPlaceStateList value) list,
   }) {
@@ -420,6 +558,7 @@ class _$BookPlaceStateList extends BookPlaceStateList {
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
     TResult? Function(BookPlaceStateFirstLoading value)? firstLoading,
+    TResult? Function(BookPlaceStateFirstEmpty value)? firstEmpty,
     TResult? Function(BookPlaceStateEmpty value)? empty,
     TResult? Function(BookPlaceStateList value)? list,
   }) {
@@ -430,6 +569,7 @@ class _$BookPlaceStateList extends BookPlaceStateList {
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
     TResult Function(BookPlaceStateFirstLoading value)? firstLoading,
+    TResult Function(BookPlaceStateFirstEmpty value)? firstEmpty,
     TResult Function(BookPlaceStateEmpty value)? empty,
     TResult Function(BookPlaceStateList value)? list,
     required TResult orElse(),

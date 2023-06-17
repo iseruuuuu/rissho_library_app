@@ -46,3 +46,7 @@ flutter:
   assets:
     - assets/images/
     - assets/places/
+    - assets/places/3/
+    - assets/places/2/
+    - assets/places/1/
+    - assets/places/b1/

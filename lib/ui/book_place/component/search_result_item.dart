@@ -27,29 +27,6 @@ class SearchResultItem extends StatelessWidget {
           ),
         ),
         Padding(
-          padding: const EdgeInsets.symmetric(horizontal: 50),
-          child: Row(
-            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-            children: [
-              const Text(
-                '階層',
-                style: TextStyle(
-                  fontSize: 25,
-                  fontWeight: FontWeight.bold,
-                  color: Colors.black,
-                ),
-              ),
-              Text(
-                searchResult[0],
-                style: const TextStyle(
-                  fontSize: 25,
-                  color: Colors.black,
-                ),
-              ),
-            ],
-          ),
-        ),
-        Padding(
           padding: const EdgeInsets.symmetric(
             horizontal: 50,
             vertical: 10,
@@ -60,15 +37,15 @@ class SearchResultItem extends StatelessWidget {
               const Text(
                 '種類',
                 style: TextStyle(
-                  fontSize: 25,
+                  fontSize: 23,
                   fontWeight: FontWeight.bold,
                   color: Colors.black,
                 ),
               ),
               Text(
-                searchResult[1],
+                searchResult[0],
                 style: const TextStyle(
-                  fontSize: 25,
+                  fontSize: 20,
                   color: Colors.black,
                 ),
               ),
@@ -76,22 +53,22 @@ class SearchResultItem extends StatelessWidget {
           ),
         ),
         Padding(
-          padding: EdgeInsets.symmetric(horizontal: 50),
+          padding: const EdgeInsets.symmetric(horizontal: 50),
           child: Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
               const Text(
                 '詳細',
                 style: TextStyle(
-                  fontSize: 25,
+                  fontSize: 23,
                   fontWeight: FontWeight.bold,
                   color: Colors.black,
                 ),
               ),
               Text(
-                searchResult[2],
+                searchResult[1],
                 style: const TextStyle(
-                  fontSize: 25,
+                  fontSize: 20,
                   color: Colors.black,
                 ),
               ),
@@ -116,7 +93,7 @@ class SearchResultItem extends StatelessWidget {
         const Text(
           '🚨正確な場所ではない可能性があります',
           style: TextStyle(
-            fontSize: 18,
+            fontSize: 15,
             fontWeight: FontWeight.bold,
             color: Colors.red,
           ),
@@ -124,8 +101,9 @@ class SearchResultItem extends StatelessWidget {
         Padding(
           padding: const EdgeInsets.symmetric(vertical: 10),
           child: Image.asset(
-            searchResult[3],
-            height: MediaQuery.of(context).size.width / 1.2,
+            searchResult[2],
+            height: MediaQuery.of(context).size.width / 1.5,
+            fit: BoxFit.contain,
           ),
         ),
       ],

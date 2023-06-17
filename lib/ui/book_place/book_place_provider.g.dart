@@ -7,7 +7,7 @@ part of 'book_place_provider.dart';
 // **************************************************************************
 
 String _$bookPlaceViewModelHash() =>
-    r'7559219bb39a64850ba488c7aefaf7ac54e4e630';
+    r'b816404d955a2b0a70744936291a7d20d471d23b';
 
 /// Copied from Dart SDK
 class _SystemHash {
@@ -35,7 +35,7 @@ abstract class _$BookPlaceViewModel
   late final BookPlaceState initState;
 
   BookPlaceState build({
-    BookPlaceState initState = const BookPlaceState.empty(),
+    BookPlaceState initState = const BookPlaceState.firstEmpty(),
   });
 }
 
@@ -50,7 +50,7 @@ class BookPlaceViewModelFamily extends Family<BookPlaceState> {
 
   /// See also [BookPlaceViewModel].
   BookPlaceViewModelProvider call({
-    BookPlaceState initState = const BookPlaceState.empty(),
+    BookPlaceState initState = const BookPlaceState.firstEmpty(),
   }) {
     return BookPlaceViewModelProvider(
       initState: initState,
@@ -86,7 +86,7 @@ class BookPlaceViewModelProvider extends AutoDisposeNotifierProviderImpl<
     BookPlaceViewModel, BookPlaceState> {
   /// See also [BookPlaceViewModel].
   BookPlaceViewModelProvider({
-    this.initState = const BookPlaceState.empty(),
+    this.initState = const BookPlaceState.firstEmpty(),
   }) : super.internal(
           () => BookPlaceViewModel()..initState = initState,
           from: bookPlaceViewModelProvider,

@@ -6,6 +6,8 @@ part 'book_place_state.freezed.dart';
 class BookPlaceState with _$BookPlaceState {
   const factory BookPlaceState.firstLoading() = BookPlaceStateFirstLoading;
 
+  const factory BookPlaceState.firstEmpty() = BookPlaceStateFirstEmpty;
+
   const factory BookPlaceState.empty() = BookPlaceStateEmpty;
 
   const factory BookPlaceState.list({
@@ -17,6 +19,7 @@ class BookPlaceState with _$BookPlaceState {
   bool get isLoading {
     return when(
       firstLoading: () => true,
+      firstEmpty: () => false,
       empty: () => false,
       list: (loadState) => loadState != [],
     );
