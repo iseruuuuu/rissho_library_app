@@ -17,6 +17,7 @@ class BookPlaceViewModel extends _$BookPlaceViewModel {
   int storeIndex = 100;
   int storeFloor = 100;
   bool is2Floor = false;
+  bool is1Floor = false;
   bool isB1Floor = false;
 
   void onChanged(String value) {
@@ -51,18 +52,26 @@ class BookPlaceViewModel extends _$BookPlaceViewModel {
     if (storeFloor == floor) {
       storeFloor = 100;
       is2Floor = false;
+      is1Floor = false;
       isB1Floor = false;
     } else {
       storeFloor = 100;
       storeFloor = floor;
       if (floor == 2) {
         is2Floor = true;
+        is1Floor = false;
         isB1Floor = false;
       } else if (floor == 0) {
         is2Floor = false;
+        is1Floor = false;
         isB1Floor = true;
+      } else if (floor == 1) {
+        is2Floor = false;
+        is1Floor = true;
+        isB1Floor = false;
       } else {
         is2Floor = false;
+        is1Floor = false;
         isB1Floor = false;
       }
     }
@@ -151,7 +160,7 @@ class BookPlaceViewModel extends _$BookPlaceViewModel {
         final List<String> bookList = BookPlaceUtils().getData(
           int.parse(keyword),
           keyword,
-          1,
+          0,
           index,
         );
         state = BookPlaceState.list(bookPlaceList: bookList);

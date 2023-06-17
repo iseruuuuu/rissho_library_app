@@ -342,6 +342,8 @@ class BookPlaceUtils {
         return '地理・地誌・紀行';
       }
     }
+
+    //TODO 空にする？？or文言を決める
     return "予期せぬエラー";
   }
 
@@ -387,8 +389,8 @@ class BookPlaceUtils {
       }
     }
     if (floor == 0) {
-      //大型本
       if (index == 5) {
+        //大型本
         return 'assets/places/b1/1.png';
       }
       //文学
@@ -424,7 +426,9 @@ class BookPlaceUtils {
         return 'assets/places/b1/9.png';
       }
     }
-    return 'assets/images/no.png';
+
+    //TODO 画像がない時に表示しないようにする
+    return '';
   }
 
   List<String> getData(int value, String stringValue, int floor, int index) {

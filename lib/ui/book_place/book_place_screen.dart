@@ -109,7 +109,7 @@ class BookPlaceScreen extends HookConsumerWidget {
                                 isSelected: index == 3,
                               )
                             : Container(),
-                        notifier.isB1Floor
+                        notifier.is1Floor
                             ? SearchCategoryItem(
                                 category: '日蓮学',
                                 select: () => ref
